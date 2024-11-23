@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                // Example: Compile code (use appropriate build tool for your project)
+                // sh 'mvn compile' or 'gradle build' for Java
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                // Example: Run tests
+                // sh 'mvn test' or 'npm test' for JavaScript
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                // Example: Deployment steps
+                // sh 'scp target/app.jar user@server:/deploy/path/'
+            }
+        }
+    }
+}
